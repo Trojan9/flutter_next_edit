@@ -57,7 +57,7 @@ extension ContextExtension on BuildContext {
   Color get disabledColor => themeData.disabledColor;
   Color get highlightColor => themeData.highlightColor;
   Color get splashColor => themeData.splashColor;
-  Color get selectedRowColor => themeData.selectedRowColor;
+  // Color get selectedRowColor => themeData.selectedRowColor;
   Color get unselectedWidgetColor => themeData.unselectedWidgetColor;
   Color get secondaryHeaderColor => themeData.secondaryHeaderColor;
 
