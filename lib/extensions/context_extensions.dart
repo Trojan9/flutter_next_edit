@@ -46,12 +46,15 @@ extension ContextExtension on BuildContext {
   Color get primaryColorDark => themeData.primaryColorDark;
   Color get primaryColorLight => themeData.primaryColorLight;
   Color get cardColor => themeData.cardColor;
-  Color get backgroundColor => themeData.backgroundColor;
+  // Color get backgroundColor => themeData.backgroundColor;
   Color get scaffoldBackgroundColor => themeData.scaffoldBackgroundColor;
   Color get accentColor => themeData.colorScheme.secondary;
   Color get canvasColor => themeData.canvasColor;
   Color get shadowColor => themeData.shadowColor;
-  Color get errorColor => themeData.errorColor;
+  Color get errorColor => themeData.colorScheme.error;
+
+  Color get backgroundColor => themeData.scaffoldBackgroundColor;
+
   Color get hintColor => themeData.hintColor;
   Color get dividerColor => themeData.dividerColor;
   Color get disabledColor => themeData.disabledColor;
@@ -61,19 +64,19 @@ extension ContextExtension on BuildContext {
   Color get unselectedWidgetColor => themeData.unselectedWidgetColor;
   Color get secondaryHeaderColor => themeData.secondaryHeaderColor;
 
-  TextStyle? get textThemeHeadline1 => textTheme.headline1;
-  TextStyle? get textThemeHeadline2 => textTheme.headline2;
-  TextStyle? get textThemeHeadline3 => textTheme.headline3;
-  TextStyle? get textThemeHeadline4 => textTheme.headline4;
-  TextStyle? get textThemeHeadline5 => textTheme.headline5;
-  TextStyle? get textThemeHeadline6 => textTheme.headline6;
-  TextStyle? get textThemeSubtitle1 => textTheme.subtitle1;
-  TextStyle? get textThemeSubtitle2 => textTheme.subtitle2;
-  TextStyle? get textThemeBodyText1 => textTheme.bodyText1;
-  TextStyle? get textThemeBodyText2 => textTheme.bodyText2;
-  TextStyle? get textThemeButton => textTheme.button;
-  TextStyle? get textThemeCaption => textTheme.caption;
-  TextStyle? get textThemeOverline => textTheme.overline;
+  TextStyle? get textThemeHeadline1 => textTheme.displayLarge;
+  TextStyle? get textThemeHeadline2 => textTheme.displayMedium;
+  TextStyle? get textThemeHeadline3 => textTheme.displaySmall;
+  TextStyle? get textThemeHeadline4 => textTheme.headlineLarge;
+  TextStyle? get textThemeHeadline5 => textTheme.headlineMedium;
+  TextStyle? get textThemeHeadline6 => textTheme.headlineSmall;
+  TextStyle? get textThemeSubtitle1 => textTheme.titleMedium;
+  TextStyle? get textThemeSubtitle2 => textTheme.titleSmall;
+  TextStyle? get textThemeBodyText1 => textTheme.bodyLarge;
+  TextStyle? get textThemeBodyText2 => textTheme.bodyMedium;
+  TextStyle? get textThemeButton => textTheme.labelLarge;
+  TextStyle? get textThemeCaption => textTheme.bodySmall;
+  TextStyle? get textThemeOverline => textTheme.labelSmall;
 
   NavigatorState get navigator => Navigator.of(this);
 }

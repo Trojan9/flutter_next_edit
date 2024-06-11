@@ -92,7 +92,8 @@ class NextButton extends StatelessWidget {
           builder: (context, isHovered) {
             if (itemBuilder != null) {
               return NextColorTweenWidget(
-                  beginColor: color ?? context.themeData.backgroundColor,
+                  beginColor:
+                      color ?? context.themeData.scaffoldBackgroundColor,
                   endColor: outlineColor ?? context.primaryColor,
                   child: (controller, value) {
                     if (isHovered) {
@@ -124,7 +125,8 @@ class NextButton extends StatelessWidget {
                     ));
               } else if (variant == NextButtonVariant.outlined) {
                 return NextColorTweenWidget(
-                    beginColor: color ?? context.themeData.backgroundColor,
+                    beginColor:
+                        color ?? context.themeData.scaffoldBackgroundColor,
                     endColor: outlineColor ?? context.primaryColor,
                     child: (controller, value) {
                       if (isHovered) {
@@ -150,13 +152,14 @@ class NextButton extends StatelessWidget {
                             padding: padding,
                             child: DefaultTextStyle(
                               style: (style ??
-                                      context.themeData.textTheme.button ??
+                                      context.themeData.textTheme.labelLarge ??
                                       const TextStyle(
                                           fontWeight: FontWeight.w600))
                                   .copyWith(
                                       color: isHovered
                                           ? color ??
-                                              context.themeData.backgroundColor
+                                              context.themeData
+                                                  .scaffoldBackgroundColor
                                           : outlineColor ??
                                               context.primaryColor),
                               child: child ?? const SizedBox(),
